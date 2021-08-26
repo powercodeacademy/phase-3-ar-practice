@@ -13,6 +13,17 @@ class Continent < ActiveRecord::Base
   #     europe = Continent.find_by(name: "Europe") (set the variable)
   # VERIFY IT WORKS:
   #   - expecting #capitals to return an array of only the capitals of associated countries
+
+  # describe "#capitals" do
+  #   it "returns only capitals of associated countries" do
+  #     europe = Continent.create(name: "Europe")
+  #     france = Country.create(name: "France", capital: "France's capital", continent: europe)
+  #     germany = Country.create(name: "Germany", capital: "Germany's capital", continent: europe)
+
+  #     expect(europe.capitals).to eq(["France's Capital", "Germany's capital"])
+  #   end
+  # end
+
   def capitals
     # go through the associated `countries`
     # pluck all of their capitals (https://apidock.com/rails/ActiveRecord/Calculations/pluck)
@@ -26,4 +37,6 @@ class Continent < ActiveRecord::Base
     # end
     countries.pluck(:capital)
   end
+
+
 end
