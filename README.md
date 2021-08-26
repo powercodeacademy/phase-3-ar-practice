@@ -112,7 +112,7 @@ countries associated with this continent - DONE
 
 - `Continent#capitals` returns an array of
 capitals from the countries associated
-with this continent
+with this continent - DONE
 
 - `Continent#highest_population` returns the
 country associated with this continent
