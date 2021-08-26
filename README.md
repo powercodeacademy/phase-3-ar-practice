@@ -120,7 +120,7 @@ that has the highest population count. - DONE
 
 - `Continent#winners_circle_members` returns
 all `countries` associated with this continent
-that have more than 50 `olympic_medals`.
+that have more than 50 `olympic_medals`. - DONE
 
 - `Continent#total_medals` returns the total
 amount of `olympic_medals` that were
