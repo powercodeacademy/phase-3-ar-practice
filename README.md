@@ -40,23 +40,30 @@ your code to adhere to best practices.
 
 ## Deliverables
 
-Write the following migrations and methods in the classes in the files provided.
-Feel free to build out any helper methods if needed.
+Write the following migrations and methods in the
+classes in the files provided. Feel free to build
+out any helper methods if needed.
 
-Deliverables use the notation `#` for instance methods, and `.` for class
-methods.
+Deliverables use the notation `#` for instance
+methods, and `.` for class methods.
 
-Remember: Active Record give your classes access to a lot of methods already!
-Keep in mind what methods Active Record gives you access to on each of your
+Remember: Active Record give your classes access
+to a lot of methods already! Keep in mind what
+methods Active Record gives you access to on each of your
 classes when you're approaching the deliverables below.
 
 ## Migrations
 
-The starter code has model files for the initial `Continent` and `Country` models.
+The starter code has model files for the initial
+`Continent` and `Country` models.
 
-Your first job is to create and run migrations for the following tables:
-- `Continents` should have a name(string).
-- `Countries` should have a name(string), capital(string), population(integer), olympic_medals(Integer) and belong_to a continent(integer)
+Your first job is to create and run migrations
+for the following tables:
+- `Continents` should have a name(string). (DONE)
+- `Countries` should have a name(string),
+capital(string), population(integer),
+olympic_medals(Integer) and belong_to
+a continent(integer)
 
 ### Continents Table
 
@@ -75,30 +82,46 @@ Your first job is to create and run migrations for the following tables:
 | continent_id        | Integer |
 
 
-After creating the `continents` and `countries` tables using migrations, use the `seeds.rb` file to
-create instances of your `Continent` and `Country` classes so you can test your code.
+After creating the `continents` and `countries`
+tables using migrations, use the `seeds.rb` file
+to create instances of your `Continent` and
+`Country` classes so you can test your code.
 
 ### Object Relationship Methods
 
-Use Active Record association macros and Active Record query methods where
+Use Active Record association macros and
+Active Record query methods where
 appropriate (i.e. `has_many` and `belongs_to`).
 
 ## Country
 
-- `Country#continent` returns the instance of `continent` associated with this country
+- `Country#continent` returns the instance of
+`continent` associated with this country - DONE
 
-- `Country#winners_circle?` will return `true` if the country has more than 50 `olympic_medals`, and `false` if the country has less than 50.
+- `Country#winners_circle?` will return `true`
+if the country has more than 50 `olympic_medals`,
+and `false` if the country has less than 50. - DONE
 
-- `Country.top_10_medalists` will return an array of the 10 countries that won the most olympic medals.
+- `Country.top_10_medalists` will return an array
+of the 10 countries that won the most olympic medals. - DONE
 
 #### Continent
 
-- `Continent#countries` returns all of the countries associated with this continent
+- `Continent#countries` returns all of the
+countries associated with this continent - DONE
 
-- `Continent#capitals` returns an array of capitals from the countries associated with this continent
+- `Continent#capitals` returns an array of
+capitals from the countries associated
+with this continent - DONE
 
-- `Continent#highest_population` returns the country associated with this continent that has the highest population count.
+- `Continent#highest_population` returns the
+country associated with this continent
+that has the highest population count. - DONE
 
-- `Continent#winners_circle_members` returns all `countries` associated with this continent that have more than 50 `olympic_medals`.
+- `Continent#winners_circle_members` returns
+all `countries` associated with this continent
+that have more than 50 `olympic_medals`. - DONE
 
-- `Continent#total_medals` returns the total amount of `olympic_medals` that were won by its associated `countries`.
+- `Continent#total_medals` returns the total
+amount of `olympic_medals` that were
+won by its associated `countries`. - DONE
