@@ -83,7 +83,24 @@ class Continent < ActiveRecord::Base
     countries.where("olympic_medals > '50'")
   end
 
+  # if #total_medals is working:
+  #   - Should return an integer
+  #   - The return value should be the sum of all `olympic_medals` won by a given country
+  # SETUP
+  #   - Start a console session
+  #     $ bundle exec rake console
+  #   - Need a continent
+  #     north_america = Continent.find(1)
+  #   - Need at least 2 countries associated with this continent that have won `olympic_medals`
+  #     north_america.countries
+  # VERIFY
+  #   - Assuming that north_america has 2 countries, 1 with 113 `olympic_medals` and 1 with 56 `olympic_medals`:
+  #     expect(north_america.total_medals) to equal 169
+  #   - Assuming that australia has 1 country, with 0 `olympic_medals`
+  #     expect(australia.total_medals) to equal 0 (rather than throwing an error)
   def total_medals
-
+    # go through to the associated countries
+    # return an integer that is the sum of all `olympic_medals` for associated countries (https://api.rubyonrails.org/v4.1.0/classes/ActiveRecord/Calculations.html#method-i-sum)
+    countries.sum(:olympic_medals)
   end
 end

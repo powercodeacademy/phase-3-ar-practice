@@ -124,4 +124,4 @@ that have more than 50 `olympic_medals`. - DONE
 
 - `Continent#total_medals` returns the total
 amount of `olympic_medals` that were
-won by its associated `countries`.
+won by its associated `countries`. - DONE
