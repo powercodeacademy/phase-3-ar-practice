@@ -19,4 +19,24 @@ class Country < ActiveRecord::Base
   def winners_circle?
     olympic_medals > 50
   end
+
+  # If .top_10_medalists is working:
+  #   - it will return an array with `olympic_medals` in descending order
+  #   - it will return an array of 10 countries at maximum
+  # SETUP:
+  #   - Start a console session
+  #     $ bundle exec rake console
+  #   - Make sure there are at least 11 countries
+  #     Country.count (verify the count)
+  #     (Create more countries if needed)
+  # RUN THE TESTS (VERIFY IT WORKED):
+  #   - expect `Country.top_10_medalists` to return only 10 countries in descending
+  #     order based on `olympic_medals`
+  #   - expect `Country.top_10_medalists` NOT TO return the country with the least amount
+  #     of `olympic_medals`
+  def self.top_10_medalists
+    # order by olympic medals (https://apidock.com/rails/ActiveRecord/QueryMethods/order)
+    # grab the top 10 (https://apidock.com/rails/ActiveRecord/QueryMethods/limit)
+    order(olympic_medals: :desc).limit(10)
+  end
 end

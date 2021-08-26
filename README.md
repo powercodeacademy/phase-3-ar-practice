@@ -100,10 +100,10 @@ appropriate (i.e. `has_many` and `belongs_to`).
 
 - `Country#winners_circle?` will return `true`
 if the country has more than 50 `olympic_medals`,
-and `false` if the country has less than 50.
+and `false` if the country has less than 50. - DONE
 
 - `Country.top_10_medalists` will return an array
-of the 10 countries that won the most olympic medals.
+of the 10 countries that won the most olympic medals. - DONE
 
 #### Continent
 
