@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_26_141823) do
+ActiveRecord::Schema.define(version: 2021_08_26_142642) do
 
   create_table "continents", force: :cascade do |t|
     t.string "name"
+  end
+
+  create_table "countries", force: :cascade do |t|
+    t.string "name"
+    t.string "capital"
+    t.integer "population"
+    t.integer "olympic_medals"
+    t.integer "continent_id"
   end
 
 end
