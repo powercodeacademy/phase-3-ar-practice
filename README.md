@@ -116,7 +116,7 @@ with this continent - DONE
 
 - `Continent#highest_population` returns the
 country associated with this continent
-that has the highest population count.
+that has the highest population count. - DONE
 
 - `Continent#winners_circle_members` returns
 all `countries` associated with this continent
